@@ -1,0 +1,88 @@
+/* ===== RESET ===== */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===== TIME PHASE BACKGROUNDS ===== */
+.morning,
+.afternoon,
+.evening,
+.night {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.8s ease;
+}
+
+/* MORNING */
+.morning {
+  background: linear-gradient(135deg, #fff6b7, #fdd835);
+  color: #333;
+}
+
+/* AFTERNOON */
+.afternoon {
+  background: linear-gradient(135deg, #e3f2fd, #90caf9);
+  color: #102027;
+}
+
+/* EVENING */
+.evening {
+  background: linear-gradient(135deg, #ffccbc, #ff8a65);
+  color: #3e2723;
+}
+
+/* NIGHT */
+.night {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #e0f7fa;
+}
+
+/* ===== VISUAL PANEL ===== */
+.panel {
+  padding: 2.5rem 3rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+/* Typography */
+.panel h1 {
+  margin: 0;
+  font-size: 2.4rem;
+  letter-spacing: 1px;
+}
+
+.panel p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+/* CLOCK */
+.clock {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+}
+/* PANEL ENTRY ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panel {
+  animation: fadeUp 0.8s ease forwards;
+}
