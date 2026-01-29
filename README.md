@@ -24,5 +24,5 @@ ChronoSense is a time-aware React web application that adapts its UI, theme, and
 
 ## 🚀 How to Run Locally
 ```bash
-npm install
+npm install 
 npm run dev
